@@ -1,0 +1,65 @@
+[gd_scene format=3 uid="uid://c78jfa6xlac2w"]
+
+[ext_resource type="Texture2D" uid="uid://cnijbiasn2goa" path="res://Scene1Cutscene/scene1talking.png" id="1_18k1e"]
+[ext_resource type="Texture2D" uid="uid://cjnpydq1dqp5t" path="res://Dialogue/dialoguebox.png" id="2_nvghv"]
+[ext_resource type="FontFile" uid="uid://bj87lw2p5a46v" path="res://Fonts/Abaddon Bold.ttf" id="3_c83jk"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_acvur"]
+bg_color = Color(0.07362818, 0.06781199, 0.10045134, 1)
+
+[node name="Control" type="Control" unique_id=1046056497]
+layout_mode = 3
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_top = -180.0
+offset_bottom = -180.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Scene1Talking" type="Sprite2D" parent="." unique_id=536594820]
+position = Vector2(7.1111145, 0)
+scale = Vector2(0.34814817, 0.3481481)
+texture = ExtResource("1_18k1e")
+
+[node name="DialogueBox" type="TextureRect" parent="." unique_id=1577120913]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -264.0
+offset_top = 92.0
+offset_right = 276.0
+offset_bottom = 177.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_nvghv")
+
+[node name="NameBox" type="Panel" parent="." unique_id=675573513]
+layout_mode = 0
+offset_left = -264.0
+offset_top = 68.0
+offset_right = -104.0
+offset_bottom = 92.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_acvur")
+
+[node name="ANDREW" type="RichTextLabel" parent="NameBox" unique_id=196852843]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.4
+anchor_top = 0.66700006
+anchor_right = 0.4
+anchor_bottom = 0.66700006
+offset_left = -56.0
+offset_top = -14.008001
+offset_right = 32.0
+offset_bottom = 12.991999
+theme_override_fonts/bold_font = ExtResource("3_c83jk")
+theme_override_font_sizes/bold_font_size = 24
+bbcode_enabled = true
+text = "[b]ANDREW[/b]"
+fit_content = true

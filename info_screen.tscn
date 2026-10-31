@@ -1,0 +1,137 @@
+[gd_scene format=3 uid="uid://bs8wcfa343s1x"]
+
+[ext_resource type="FontFile" uid="uid://bj87lw2p5a46v" path="res://Fonts/Abaddon Bold.ttf" id="1_rtefb"]
+[ext_resource type="FontFile" uid="uid://df0hie4kepnxr" path="res://Fonts/Abaddon Light.ttf" id="2_ui1d1"]
+[ext_resource type="Texture2D" uid="uid://c3m3c7m7w6ur3" path="res://Large Buttons/Colored Large Buttons/Back  col_Button.png" id="3_fdmwl"]
+[ext_resource type="Texture2D" uid="uid://ccm26pevc6wat" path="res://Large Buttons/Colored Large Buttons/Back Button.png" id="4_fe8s4"]
+[ext_resource type="Script" uid="uid://bbc3426d2v45e" path="res://back_col_button.gd" id="5_nuisq"]
+[ext_resource type="AudioStream" uid="uid://b7srpkgp847a3" path="res://Music/hover-1.wav" id="6_wcqjq"]
+[ext_resource type="AudioStream" uid="uid://xy3px527k8c8" path="res://Music/confirm-4.wav" id="7_uokgu"]
+
+[sub_resource type="Theme" id="Theme_ksbty"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rtefb"]
+bg_color = Color(0.22720754, 0.01863405, 0, 1)
+
+[sub_resource type="Theme" id="Theme_ui1d1"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yi24a"]
+bg_color = Color(0.5931336, 0.59313357, 0.59313357, 0.42352942)
+expand_margin_left = 30.0
+expand_margin_right = 30.0
+shadow_color = Color(0, 0, 0, 0.5137255)
+shadow_size = 11
+
+[node name="InfoScreen" type="Control" unique_id=1088366938]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1715668532]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_ksbty")
+theme_override_styles/panel = SubResource("StyleBoxFlat_rtefb")
+
+[node name="PanelContainer2" type="PanelContainer" parent="." unique_id=2081776730]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -264.0
+offset_top = -148.0
+offset_right = 262.22217
+offset_bottom = 148.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_ui1d1")
+theme_override_styles/panel = SubResource("StyleBoxFlat_yi24a")
+
+[node name="Keyboard Controls" type="RichTextLabel" parent="." unique_id=1014232056]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -312.0
+offset_top = -172.0
+offset_right = -151.0
+offset_bottom = -124.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.6666667)
+theme_override_fonts/bold_font = ExtResource("1_rtefb")
+theme_override_font_sizes/bold_font_size = 35
+bbcode_enabled = true
+text = "[b]  CREDITS [/b]"
+fit_content = true
+autowrap_mode = 0
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Keyboard Controls2" type="RichTextLabel" parent="." unique_id=1328968258]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -184.0
+offset_top = -124.0
+offset_right = 165.0
+offset_bottom = 136.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.6666667)
+theme_override_fonts/normal_font = ExtResource("2_ui1d1")
+theme_override_font_sizes/normal_font_size = 22
+theme_override_font_sizes/bold_font_size = 150
+bbcode_enabled = true
+text = "SOUNDS:
+Cozy UI sounds by Spaceyyy
+Crow Shade by CrowSilencer
+GRAPHICS
+Paper Keys: Janek Roeben (U-GameZ)
+Menu Buttons: Nectanebo 
+Modern Interior: Limezu
+
+ALL ON ITCH.IO
+
+"
+fit_content = true
+autowrap_mode = 0
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BackButton" type="TextureButton" parent="." unique_id=1695813439]
+layout_mode = 0
+offset_left = 504.0
+offset_top = 16.0
+offset_right = 1104.0
+offset_bottom = 216.0
+scale = Vector2(0.2, 0.2)
+texture_normal = ExtResource("3_fdmwl")
+texture_pressed = ExtResource("3_fdmwl")
+texture_hover = ExtResource("4_fe8s4")
+script = ExtResource("5_nuisq")
+
+[node name="HoverSound" type="AudioStreamPlayer2D" parent="BackButton" unique_id=215036607]
+stream = ExtResource("6_wcqjq")
+volume_db = -5.814
+
+[node name="PressSound" type="AudioStreamPlayer2D" parent="BackButton" unique_id=643560015]
+stream = ExtResource("7_uokgu")
+volume_db = -5.814
+
+[connection signal="mouse_entered" from="BackButton" to="BackButton" method="_on_mouse_entered"]
+[connection signal="pressed" from="BackButton" to="BackButton" method="_on_pressed"]

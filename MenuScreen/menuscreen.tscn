@@ -1,0 +1,194 @@
+[gd_scene format=3 uid="uid://ou0h0dc7y1nx"]
+
+[ext_resource type="Script" uid="uid://c052e8rqkw1gl" path="res://MenuScreen/menuscreen.gd" id="1_485ff"]
+[ext_resource type="Texture2D" uid="uid://cgljq7bc601hh" path="res://MenuScreen/launchscreenbg.png" id="1_iiyva"]
+[ext_resource type="Script" uid="uid://dd5x4ptor61rn" path="res://MenuScreen/launchscreenbg.gd" id="2_lehdb"]
+[ext_resource type="Texture2D" uid="uid://p5xab15wiu41" path="res://MenuScreen/launchscreenmc.png" id="2_xnr3c"]
+[ext_resource type="Texture2D" uid="uid://cp4t2ujs03orp" path="res://MenuScreen/launchscreen2.png" id="3_utot6"]
+[ext_resource type="Script" uid="uid://by0c3matainbv" path="res://MenuScreen/launchscreenmc.gd" id="4_sdn43"]
+[ext_resource type="Texture2D" uid="uid://bmntdhea4gfou" path="res://Large Buttons/Colored Large Buttons/Play col_Button.png" id="5_kjrv7"]
+[ext_resource type="Texture2D" uid="uid://bn2dv4m6ls06g" path="res://Large Buttons/Colored Large Buttons/Play col_Button_hover.png" id="6_lbpqr"]
+[ext_resource type="Script" uid="uid://beig4ahb3c70b" path="res://play_col_button.gd" id="7_3pvi6"]
+[ext_resource type="Texture2D" uid="uid://c42b7ol0irdqo" path="res://Large Buttons/Colored Large Buttons/Quit  col_Button.png" id="7_66jmn"]
+[ext_resource type="Texture2D" uid="uid://ccd72s4bpe5lt" path="res://MenuScreen/novacancytitle.png" id="7_kjrv7"]
+[ext_resource type="AudioStream" uid="uid://b7srpkgp847a3" path="res://Music/hover-1.wav" id="7_ubymr"]
+[ext_resource type="Texture2D" uid="uid://c8yudolkce6tx" path="res://Large Buttons/Colored Large Buttons/Quit  col_Button_hover.png" id="8_3rp8k"]
+[ext_resource type="AudioStream" uid="uid://xy3px527k8c8" path="res://Music/confirm-4.wav" id="8_4vfsj"]
+[ext_resource type="Script" uid="uid://7u2ge7rg16tg" path="res://quit_col_button.gd" id="9_3rp8k"]
+[ext_resource type="Texture2D" uid="uid://oceigke6btwc" path="res://Large Buttons/Colored Large Buttons/Controls  col_Button.png" id="9_f02sd"]
+[ext_resource type="Texture2D" uid="uid://s53hxi45e5mn" path="res://Large Buttons/Colored Large Buttons/Controls  col_Button_hover.png" id="10_xhox0"]
+[ext_resource type="Script" uid="uid://brnbhcfgv15w7" path="res://Controls Panel/controls_col_button.gd" id="12_f02sd"]
+[ext_resource type="Texture2D" uid="uid://bhfmwmcj73lfl" path="res://Large Buttons/Colored Large Buttons/Menu Buttons sprite (Colored).png" id="19_7ncsa"]
+[ext_resource type="Texture2D" uid="uid://ev7vwk4d8xyp" path="res://Large Buttons/Colored Large Buttons/Menu Buttons sprite (BnW).png" id="20_6kxqe"]
+[ext_resource type="Script" uid="uid://b4lxgsxa3bftx" path="res://MenuScreen/info_button.gd" id="21_6kxqe"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ooinm"]
+animations = [{
+"frames": [{
+"duration": 4.4,
+"texture": ExtResource("3_utot6")
+}, {
+"duration": 5.5,
+"texture": ExtResource("2_xnr3c")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 3.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3i5sb"]
+atlas = ExtResource("19_7ncsa")
+region = Rect2(1816, 408, 216, 216)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ooinm"]
+atlas = ExtResource("20_6kxqe")
+region = Rect2(1816, 408, 216, 216)
+
+[node name="Node2D" type="Node2D" unique_id=1016557659]
+script = ExtResource("1_485ff")
+
+[node name="Launchscreenbg" type="TextureRect" parent="." unique_id=1656033028]
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -20.690304
+offset_top = -21.000004
+offset_right = 1821.3037
+offset_bottom = 1205.4373
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.3688289, 0.32370186)
+size_flags_stretch_ratio = 0.0
+texture = ExtResource("1_iiyva")
+expand_mode = 1
+script = ExtResource("2_lehdb")
+
+[node name="Launchscreenmc" type="Sprite2D" parent="." unique_id=724113152]
+position = Vector2(214.99998, 189.00002)
+scale = Vector2(0.3222991, 0.31666657)
+texture = ExtResource("2_xnr3c")
+script = ExtResource("4_sdn43")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Launchscreenmc" unique_id=1049623611]
+sprite_frames = SubResource("SpriteFrames_ooinm")
+autoplay = "default"
+frame = 1
+frame_progress = 0.8326985
+
+[node name="Control" type="Control" parent="." unique_id=966883084]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Novacancytitle" type="Sprite2D" parent="." unique_id=411034264]
+position = Vector2(520, 72.00001)
+scale = Vector2(0.19666664, 0.19666667)
+texture = ExtResource("7_kjrv7")
+
+[node name="PlayColButton" type="TextureButton" parent="." unique_id=1599016777]
+offset_left = 480.00003
+offset_top = 143.00002
+offset_right = 1106.6666
+offset_bottom = 369.6667
+scale = Vector2(0.2, 0.2)
+texture_normal = ExtResource("5_kjrv7")
+texture_pressed = ExtResource("5_kjrv7")
+texture_hover = ExtResource("6_lbpqr")
+script = ExtResource("7_3pvi6")
+
+[node name="HoverSound" type="AudioStreamPlayer2D" parent="PlayColButton" unique_id=2098488009]
+stream = ExtResource("7_ubymr")
+volume_db = -5.814
+
+[node name="PressSound" type="AudioStreamPlayer2D" parent="PlayColButton" unique_id=875896165]
+stream = ExtResource("8_4vfsj")
+volume_db = -5.814
+
+[node name="QuitColButton" type="TextureButton" parent="." unique_id=1928360333]
+offset_left = 479.0
+offset_top = 240.0
+offset_right = 1079.0
+offset_bottom = 440.0
+scale = Vector2(0.2, 0.2)
+texture_normal = ExtResource("7_66jmn")
+texture_pressed = ExtResource("7_66jmn")
+texture_hover = ExtResource("8_3rp8k")
+script = ExtResource("9_3rp8k")
+
+[node name="HoverSound" type="AudioStreamPlayer2D" parent="QuitColButton" unique_id=895902147]
+position = Vector2(0, -559.99994)
+scale = Vector2(0.99999994, 0.99999994)
+stream = ExtResource("7_ubymr")
+volume_db = -5.814
+
+[node name="PressSound" type="AudioStreamPlayer2D" parent="QuitColButton" unique_id=775557481]
+position = Vector2(0, -559.99994)
+scale = Vector2(0.99999994, 0.99999994)
+stream = ExtResource("8_4vfsj")
+volume_db = -5.814
+
+[node name="ControlsColButton" type="TextureButton" parent="." unique_id=424039771]
+offset_left = 479.0
+offset_top = 192.0
+offset_right = 1079.0
+offset_bottom = 392.0
+scale = Vector2(0.2, 0.2)
+texture_normal = ExtResource("9_f02sd")
+texture_pressed = ExtResource("9_f02sd")
+texture_hover = ExtResource("10_xhox0")
+script = ExtResource("12_f02sd")
+
+[node name="HoverSound" type="AudioStreamPlayer2D" parent="ControlsColButton" unique_id=950029639]
+position = Vector2(0, -559.99994)
+scale = Vector2(0.99999994, 0.99999994)
+stream = ExtResource("7_ubymr")
+volume_db = -5.814
+
+[node name="PressSound" type="AudioStreamPlayer2D" parent="ControlsColButton" unique_id=1537268604]
+position = Vector2(0, -559.99994)
+scale = Vector2(0.99999994, 0.99999994)
+stream = ExtResource("8_4vfsj")
+volume_db = -5.814
+
+[node name="InfoButton" type="TextureButton" parent="." unique_id=1672274831]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 568.00006
+offset_top = 288.0
+offset_right = 784.00006
+offset_bottom = 504.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.16075112, 0.16075112)
+texture_normal = SubResource("AtlasTexture_3i5sb")
+texture_pressed = SubResource("AtlasTexture_3i5sb")
+texture_hover = SubResource("AtlasTexture_ooinm")
+stretch_mode = 0
+script = ExtResource("21_6kxqe")
+
+[node name="HoverSound" type="AudioStreamPlayer2D" parent="InfoButton" unique_id=2042044974]
+position = Vector2(0, -559.99994)
+scale = Vector2(0.99999994, 0.99999994)
+stream = ExtResource("7_ubymr")
+volume_db = -5.814
+
+[node name="PressSound" type="AudioStreamPlayer2D" parent="InfoButton" unique_id=329624449]
+position = Vector2(0, -559.99994)
+scale = Vector2(0.99999994, 0.99999994)
+stream = ExtResource("8_4vfsj")
+volume_db = -5.814
+
+[connection signal="mouse_entered" from="PlayColButton" to="." method="_on_play_col_button_mouse_entered"]
+[connection signal="mouse_entered" from="PlayColButton" to="PlayColButton" method="_on_mouse_entered"]
+[connection signal="mouse_entered" from="PlayColButton" to="QuitColButton" method="_on_play_col_button_mouse_entered"]
+[connection signal="mouse_entered" from="PlayColButton" to="ControlsColButton" method="_on_play_col_button_mouse_entered"]
+[connection signal="pressed" from="PlayColButton" to="PlayColButton" method="_on_pressed"]
+[connection signal="pressed" from="PlayColButton" to="QuitColButton" method="_on_play_col_button_pressed"]
+[connection signal="mouse_entered" from="QuitColButton" to="QuitColButton" method="_on_mouse_entered"]
+[connection signal="pressed" from="QuitColButton" to="QuitColButton" method="_on_pressed"]
+[connection signal="mouse_entered" from="ControlsColButton" to="ControlsColButton" method="_on_mouse_entered"]
+[connection signal="pressed" from="ControlsColButton" to="ControlsColButton" method="_on_pressed"]
+[connection signal="mouse_entered" from="InfoButton" to="InfoButton" method="_on_mouse_entered"]
+[connection signal="pressed" from="InfoButton" to="InfoButton" method="_on_pressed"]

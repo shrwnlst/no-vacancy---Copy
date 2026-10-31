@@ -1,0 +1,547 @@
+[gd_scene format=3 uid="uid://crxkl81ucxk3w"]
+
+[ext_resource type="Texture2D" uid="uid://c3m3c7m7w6ur3" path="res://Large Buttons/Colored Large Buttons/Back  col_Button.png" id="1_3xxqt"]
+[ext_resource type="FontFile" uid="uid://df0hie4kepnxr" path="res://Fonts/Abaddon Light.ttf" id="2_dcwbj"]
+[ext_resource type="Texture2D" uid="uid://ccm26pevc6wat" path="res://Large Buttons/Colored Large Buttons/Back Button.png" id="2_v5jss"]
+[ext_resource type="AudioStream" uid="uid://b7srpkgp847a3" path="res://Music/hover-1.wav" id="4_3klgx"]
+[ext_resource type="Script" uid="uid://bbc3426d2v45e" path="res://back_col_button.gd" id="5_ny38d"]
+[ext_resource type="AudioStream" uid="uid://xy3px527k8c8" path="res://Music/confirm-4.wav" id="5_otnt7"]
+[ext_resource type="FontFile" uid="uid://bj87lw2p5a46v" path="res://Fonts/Abaddon Bold.ttf" id="6_jo56r"]
+[ext_resource type="Texture2D" uid="uid://c1tq6167rf7ix" path="res://Controls Panel/special_keys_paper_strip38.png" id="13_m11lj"]
+[ext_resource type="Texture2D" uid="uid://k6vbek7ds4h0" path="res://Controls Panel/space_pressed_paper.png" id="16_sokcu"]
+[ext_resource type="Texture2D" uid="uid://5spjvoog5y5r" path="res://Controls Panel/space_paper.png" id="17_o0xf0"]
+[ext_resource type="Texture2D" uid="uid://m8q0ydmjkrh2" path="res://Controls Panel/e_paper.png" id="18_n4nle"]
+[ext_resource type="Texture2D" uid="uid://beeuvgujxyt7q" path="res://Controls Panel/e_pressed_paper.png" id="19_48nnb"]
+[ext_resource type="Texture2D" uid="uid://b1jlkntqmbehw" path="res://Controls Panel/letter_keys_paper_strip52.png" id="20_o0xf0"]
+
+[sub_resource type="Theme" id="Theme_kxtwu"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kq3yo"]
+bg_color = Color(0.22720754, 0.01863405, 0, 1)
+
+[sub_resource type="Theme" id="Theme_kxvun"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hkas0"]
+bg_color = Color(0.5931336, 0.59313357, 0.59313357, 0.42352942)
+expand_margin_left = 30.0
+expand_margin_right = 30.0
+shadow_color = Color(0, 0, 0, 0.5137255)
+shadow_size = 11
+
+[sub_resource type="Theme" id="Theme_yq81n"]
+default_font = ExtResource("2_dcwbj")
+default_font_size = 20
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n4nle"]
+atlas = ExtResource("20_o0xf0")
+region = Rect2(0, 0, 85, 89)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_48nnb"]
+atlas = ExtResource("20_o0xf0")
+region = Rect2(85, 0, 85, 89)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1jb2p"]
+animations = [{
+"frames": [{
+"duration": 3.0,
+"texture": SubResource("AtlasTexture_n4nle")
+}, {
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_48nnb")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 2.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uejcw"]
+atlas = ExtResource("20_o0xf0")
+region = Rect2(504, 0, 84, 89)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eymo1"]
+atlas = ExtResource("20_o0xf0")
+region = Rect2(588, 0, 84, 89)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6mer1"]
+animations = [{
+"frames": [{
+"duration": 3.0,
+"texture": SubResource("AtlasTexture_uejcw")
+}, {
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_eymo1")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 2.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_miuhl"]
+atlas = ExtResource("20_o0xf0")
+region = Rect2(3024, 0, 84, 89)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5tjpp"]
+atlas = ExtResource("20_o0xf0")
+region = Rect2(3108, 0, 84, 89)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6pems"]
+animations = [{
+"frames": [{
+"duration": 3.0,
+"texture": SubResource("AtlasTexture_miuhl")
+}, {
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_5tjpp")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 2.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_olilm"]
+atlas = ExtResource("20_o0xf0")
+region = Rect2(3696, 0, 84, 89)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6g3cp"]
+atlas = ExtResource("20_o0xf0")
+region = Rect2(3780, 0, 84, 89)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3yyqt"]
+animations = [{
+"frames": [{
+"duration": 3.0,
+"texture": SubResource("AtlasTexture_olilm")
+}, {
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_6g3cp")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 2.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3i5sb"]
+animations = [{
+"frames": [{
+"duration": 3.0,
+"texture": ExtResource("17_o0xf0")
+}, {
+"duration": 2.0,
+"texture": ExtResource("16_sokcu")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 2.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yq81n"]
+animations = [{
+"frames": [{
+"duration": 3.0,
+"texture": ExtResource("18_n4nle")
+}, {
+"duration": 2.0,
+"texture": ExtResource("19_48nnb")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 2.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mg01t"]
+atlas = ExtResource("13_m11lj")
+region = Rect2(816, 0, 102, 99)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dcwbj"]
+atlas = ExtResource("13_m11lj")
+region = Rect2(918, 0, 102, 99)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ooinm"]
+animations = [{
+"frames": [{
+"duration": 3.0,
+"texture": SubResource("AtlasTexture_mg01t")
+}, {
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_dcwbj")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 2.0
+}]
+
+[node name="controls" type="Control" unique_id=614124966]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1650334284]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_kxtwu")
+theme_override_styles/panel = SubResource("StyleBoxFlat_kq3yo")
+
+[node name="PanelContainer2" type="PanelContainer" parent="." unique_id=1431324230]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -264.0
+offset_top = -148.0
+offset_right = 262.22217
+offset_bottom = 148.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_kxvun")
+theme_override_styles/panel = SubResource("StyleBoxFlat_hkas0")
+
+[node name="Keyboard Controls" type="RichTextLabel" parent="." unique_id=216917757]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -304.0
+offset_top = -164.0
+offset_right = 41.0
+offset_bottom = -116.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.6666667)
+theme_override_fonts/bold_font = ExtResource("6_jo56r")
+theme_override_font_sizes/bold_font_size = 35
+bbcode_enabled = true
+text = "[b] KEYBOARD CONTROLS [/b]"
+fit_content = true
+autowrap_mode = 0
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Walk Left" type="RichTextLabel" parent="." unique_id=372923835]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -264.0
+offset_top = -44.000015
+offset_right = -184.0
+offset_bottom = 3.9999695
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.7, 0.7)
+theme = SubResource("Theme_yq81n")
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.6666667)
+theme_override_fonts/bold_font = ExtResource("6_jo56r")
+theme_override_font_sizes/bold_font_size = 35
+bbcode_enabled = true
+text = "Walk Left"
+fit_content = true
+autowrap_mode = 0
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="WalkUp" type="RichTextLabel" parent="." unique_id=848163656]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -256.0
+offset_top = -76.0
+offset_right = -95.0
+offset_bottom = -53.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.7, 0.7)
+theme = SubResource("Theme_yq81n")
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.6666667)
+theme_override_fonts/bold_font = ExtResource("6_jo56r")
+theme_override_font_sizes/bold_font_size = 35
+bbcode_enabled = true
+text = "Walk Back/Upwards"
+fit_content = true
+autowrap_mode = 0
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="WalkRight" type="RichTextLabel" parent="." unique_id=510514758]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -80.0
+offset_top = -44.000015
+offset_right = 81.0
+offset_bottom = 3.9999847
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.7, 0.7)
+theme = SubResource("Theme_yq81n")
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.6666667)
+theme_override_fonts/bold_font = ExtResource("6_jo56r")
+theme_override_font_sizes/bold_font_size = 35
+bbcode_enabled = true
+text = "Walk Right"
+fit_content = true
+autowrap_mode = 0
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ESC" type="RichTextLabel" parent="." unique_id=58275623]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 152.72726
+offset_top = -84.00001
+offset_right = 313.72723
+offset_bottom = -36.000015
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.7, 0.7)
+theme = SubResource("Theme_yq81n")
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.6666667)
+theme_override_fonts/bold_font = ExtResource("6_jo56r")
+theme_override_font_sizes/bold_font_size = 35
+bbcode_enabled = true
+text = "ESC: Menu"
+fit_content = true
+autowrap_mode = 0
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="WalkRight2" type="RichTextLabel" parent="." unique_id=1455031758]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 142.28564
+offset_top = 36.0
+offset_right = 344.28564
+offset_bottom = 84.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.7, 0.7)
+theme = SubResource("Theme_yq81n")
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.6666667)
+theme_override_fonts/bold_font = ExtResource("6_jo56r")
+theme_override_font_sizes/bold_font_size = 35
+bbcode_enabled = true
+text = "SpaceBar: Skip Dialogue"
+fit_content = true
+autowrap_mode = 0
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="WalkRight3" type="RichTextLabel" parent="." unique_id=963453839]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 135.99997
+offset_top = -18.829254
+offset_right = 338.0
+offset_bottom = 29.170746
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.7, 0.7)
+theme = SubResource("Theme_yq81n")
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.6666667)
+theme_override_fonts/bold_font = ExtResource("6_jo56r")
+theme_override_font_sizes/bold_font_size = 35
+bbcode_enabled = true
+text = "Interact"
+fit_content = true
+autowrap_mode = 0
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="WalkDown" type="RichTextLabel" parent="." unique_id=1524361043]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -114.69995
+offset_top = 52.499985
+offset_right = 94.30005
+offset_bottom = 100.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.7, 0.7)
+theme = SubResource("Theme_yq81n")
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.6666667)
+theme_override_fonts/bold_font = ExtResource("6_jo56r")
+theme_override_font_sizes/bold_font_size = 35
+bbcode_enabled = true
+text = "Walk Forward/Downwards"
+fit_content = true
+autowrap_mode = 0
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BackButton" type="TextureButton" parent="." unique_id=674501123]
+layout_mode = 0
+offset_left = 504.0
+offset_top = 16.0
+offset_right = 1104.0
+offset_bottom = 216.0
+scale = Vector2(0.2, 0.2)
+texture_normal = ExtResource("1_3xxqt")
+texture_pressed = ExtResource("1_3xxqt")
+texture_hover = ExtResource("2_v5jss")
+script = ExtResource("5_ny38d")
+
+[node name="HoverSound" type="AudioStreamPlayer2D" parent="BackButton" unique_id=991323344]
+stream = ExtResource("4_3klgx")
+volume_db = -5.814
+
+[node name="PressSound" type="AudioStreamPlayer2D" parent="BackButton" unique_id=827506882]
+stream = ExtResource("5_otnt7")
+volume_db = -5.814
+
+[node name="Node2D" type="Node2D" parent="." unique_id=1059862370]
+
+[node name="Akey" type="AnimatedSprite2D" parent="Node2D" unique_id=1774511938]
+position = Vector2(151.99997, 169.42859)
+scale = Vector2(0.5647059, 0.56470585)
+sprite_frames = SubResource("SpriteFrames_1jb2p")
+autoplay = "default"
+
+[node name="DKey" type="AnimatedSprite2D" parent="Node2D" unique_id=338063771]
+position = Vector2(232.00003, 193.42859)
+scale = Vector2(0.5714286, 0.5714286)
+sprite_frames = SubResource("SpriteFrames_6mer1")
+autoplay = "default"
+
+[node name="SKey" type="AnimatedSprite2D" parent="Node2D" unique_id=1261876301]
+position = Vector2(184.00003, 201.42856)
+scale = Vector2(0.5714286, 0.5714286)
+sprite_frames = SubResource("SpriteFrames_6pems")
+autoplay = "default"
+
+[node name="WKey" type="AnimatedSprite2D" parent="Node2D" unique_id=1729907590]
+position = Vector2(200.00003, 161.42856)
+scale = Vector2(0.5714286, 0.5714286)
+sprite_frames = SubResource("SpriteFrames_3yyqt")
+autoplay = "default"
+
+[node name="LineUp" type="Line2D" parent="." unique_id=2046009342]
+position = Vector2(72, 56.000008)
+scale = Vector2(0.7, 0.7)
+points = PackedVector2Array(182.85713, 114.28569, 171.42856, 79.99997, 159.99998, 79.99997)
+width = 3.0
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+sharp_limit = 1.275
+round_precision = 32
+
+[node name="LineRight" type="Line2D" parent="." unique_id=760204146]
+position = Vector2(144, 79.99999)
+scale = Vector2(0.6999999, 0.6999999)
+points = PackedVector2Array(125.71431, 125.7143, 137.14287, 102.857155, 160.00002, 102.857155)
+width = 3.0
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+sharp_limit = 1.275
+round_precision = 32
+
+[node name="LineLeft" type="Line2D" parent="." unique_id=123010152]
+position = Vector2(15.999998, 71.99999)
+scale = Vector2(0.7, 0.7)
+points = PackedVector2Array(171.42856, 114.28571, 160, 102.85713, 148.57143, 102.85713)
+width = 3.0
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+sharp_limit = 1.275
+round_precision = 32
+
+[node name="LineDown" type="Line2D" parent="." unique_id=1403200562]
+position = Vector2(77.30002, 136.5)
+scale = Vector2(0.6999999, 0.6999999)
+points = PackedVector2Array(144, 128, 152, 152, 176, 152)
+width = 3.0
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+sharp_limit = 1.275
+round_precision = 32
+
+[node name="LineDown2" type="Line2D" parent="." unique_id=887886568]
+position = Vector2(334.6667, 136.00002)
+scale = Vector2(0.6999999, 0.6999999)
+points = PackedVector2Array(136.59865, 125.714294, 148.57144, 137.14287, 171.42862, 137.14287)
+width = 3.0
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+sharp_limit = 1.275
+round_precision = 32
+
+[node name="LineDown3" type="Line2D" parent="." unique_id=1497928468]
+position = Vector2(368, 65.170746)
+scale = Vector2(0.6999999, 0.6999999)
+points = PackedVector2Array(137.14287, 148.57144, 148.57144, 160.00003, 171.42859, 160.00003)
+width = 3.0
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+sharp_limit = 1.275
+round_precision = 32
+
+[node name="SpaceKey" type="AnimatedSprite2D" parent="." unique_id=550687237]
+position = Vector2(398.2857, 216)
+scale = Vector2(0.57142866, 0.5714286)
+sprite_frames = SubResource("SpriteFrames_3i5sb")
+autoplay = "default"
+
+[node name="EKey" type="AnimatedSprite2D" parent="." unique_id=431835284]
+position = Vector2(432, 161.17075)
+scale = Vector2(0.5853662, 0.58536613)
+sprite_frames = SubResource("SpriteFrames_yq81n")
+autoplay = "default"
+
+[node name="ESCKey" type="AnimatedSprite2D" parent="." unique_id=2015205507]
+position = Vector2(440.72726, 112)
+scale = Vector2(0.48484847, 0.4848485)
+sprite_frames = SubResource("SpriteFrames_ooinm")
+autoplay = "default"
+
+[node name="LineDown4" type="Line2D" parent="ESCKey" unique_id=1466992426]
+position = Vector2(-115.50006, -231)
+scale = Vector2(1.4437499, 1.4437499)
+points = PackedVector2Array(125.71423, 148.57143, 137.14282, 160, 160.00003, 160)
+width = 3.0
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+sharp_limit = 1.275
+round_precision = 32
+
+[connection signal="mouse_entered" from="BackButton" to="BackButton" method="_on_mouse_entered"]
+[connection signal="pressed" from="BackButton" to="BackButton" method="_on_pressed"]
